@@ -1,0 +1,11 @@
+id,sexo,edad,ingreso,educacion,peso_muestral,region,participacion
+1,F,27,120000,Universitario,1.2,Pampeana,Si
+2,M,35,,Posgrado,0.8,Patagonia,No
+3,F,41,95000,Secundario,1.5,Noroeste,Si
+4,M,29,150000,Universitario,0.9,Centro,No
+5,F,,110000,Secundario,1.3,Noreste,Si
+6,M,52,240000,Posgrado,0.7,Pampeana,No
+7,F,45,135000,Universitario,1.1,Cuyo,Si
+8,M,38,,Secundario,1.0,Centro,No
+9,F,31,87000,Secundario,1.4,Noroeste,Si
+10,M,24,102000,Universitario,0.6,Pampeana,No
