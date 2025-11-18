@@ -1,5 +1,0 @@
-id_nota,fecha,titulo,copete,autor,categoria,provincia,lat,lon,ubicacion_detectada,ubicaciones_ner
-1,2024-03-05,"Gobierno anuncia plan de inversión","El presidente presentó obras",Redacción,Economia,Buenos Aires,-34.6037,-58.3816,"Buenos Aires","Buenos Aires"
-2,2024-03-06,"Conflicto docente continúa","El gremio define nuevas medidas",Agencia,Ieducacion,Córdoba,-31.4201,-64.1888,"Córdoba","Córdoba"
-3,2024-03-07,"Protestas en el sur","Organizaciones mapuches reclaman",Redacción,Sociedad,Río Negro,-41.1335,-71.3083,"Bariloche","Patagonia"
-4,2024-03-08,"Intendentes reclaman fondos","Encuentro en Rosario",Agencia,Politica,Santa Fe,-32.9442,-60.6505,"Rosario","Santa Fe"

@@ -1,6 +1,0 @@
-id_evento,provincia,localidad,lat,lon,participantes,tipo_evento,fecha
-1,Buenos Aires,La Plata,-34.9214,-57.9544,300,Marcha,2024-03-15
-2,Córdoba,Córdoba,-31.4201,-64.1888,150,Reunión,2024-03-18
-3,Santa Fe,Rosario,-32.9442,-60.6505,500,Marcha,2024-03-20
-4,Mendoza,Mendoza,-32.8895,-68.8458,200,Conferencia,2024-03-25
-5,Salta,Salta,-24.7821,-65.4232,120,Asamblea,2024-03-28
