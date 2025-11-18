@@ -26,7 +26,7 @@ Una ventaja importante de R es su comunidad. Cualquier problema que
 enfrentemos ante nuestra pantalla seguro ya fue consultado y solucionado
 en [Stack Overflow](https://es.stackoverflow.com/).
 
-### [Hojas de trucos](https://github.com/agusnieto77/TalleR/tree/main/recursos/chuletas_es_r.pdf)
+### [Hojas de trucos](https://github.com/agusnieto77/TalleR/raw/main/recursos/chuletas_es_r.pdf)
 
 Es útil para darnos una idea sobre las funciones de los principales
 paquetes de tidyverse. Sabremos qué hacen y como aplicarlo.
