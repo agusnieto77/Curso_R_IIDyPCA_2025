@@ -204,3 +204,7 @@ Para practicar un poco:
     Content](https://preprints.apsanet.org/engage/apsa/article-details/5f594a6b1d75ae001b0fab90) -
     [en
     PDF](https://estudiosmaritimossociales.org/Data_TalleR/protest-event-data-from-geolocated-social-media-content.pdf)
+
+    # Videos Clases
+
+    [**Clase 1**](https://youtu.be/05EFYtArkQs)
