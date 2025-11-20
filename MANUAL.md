@@ -844,17 +844,35 @@ library(swirl)
 swirl()
 ```
 
-### Libros gratuitos (en inglés)
+### Libros gratuitos
 - [R for Data Science](https://r4ds.had.co.nz/)
+- [R Para Ciencia de Datos](https://es.r4ds.hadley.nz/)
 - [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf)
+- [Introducción a R](https://cran.r-project.org/doc/contrib/R-intro-1.1.0-espanol.1.pdf)
+- [Manuel de R](https://fhernanb.github.io/Manual-de-R/)
 
 ### Comunidad
 - [RStudio Community](https://community.rstudio.com/)
+- [Comunidad R-Hispano](https://r-es.org/)
 - [Stack Overflow - R](https://stackoverflow.com/questions/tagged/r)
+- [R-bloggers](https://www.r-bloggers.com/)
+- [R-Ladies](https://rladies.org/)
+- [RPub](https://rpubs.com/)
 
 ### Cheat Sheets (Hojas de referencia)
 - [RStudio Cheat Sheets](https://www.rstudio.com/resources/cheatsheets/)
 
+### Cheat Sheets (Hojas de referencia)
+- [Glosario](https://github.com/agusnieto77/Curso_R_IIDyPCA_2025/blob/main/GLOSARIO.md)
+
+### Tutoriales
+- [R para dummies](https://www.youtube.com/watch?v=txr53VqSGoM)
+- [R en 90 minutos](https://www.youtube.com/watch?v=WCcHcWsMN1o)
+- [R en 2 minutos](https://www.youtube.com/watch?v=7RkkE35ZMnE)
+- [R para muy principiantes](https://www.youtube.com/@rparamuyprincipiantes8278/videos)
+
+### R vs Python
+- [R vs Python 💥 ¿Cuál es mejor?](https://www.youtube.com/watch?v=i9mPOvT0X6M)
 ---
 
 ## 📝 Notas finales
@@ -873,7 +891,7 @@ Una vez que domines estos conceptos básicos, puedes avanzar a:
 
 - Control de flujo (`if`, `for`, `while`)
 - Crear tus propias funciones
-- Paquetes avanzados (`tidyverse`, `ggplot2`)
+- Paquetes avanzados (`caret`, `tidymodels`, `shiny`)
 - Análisis estadístico
 - Machine Learning
 
