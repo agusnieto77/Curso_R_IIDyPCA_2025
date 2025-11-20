@@ -4,7 +4,7 @@ Este glosario está diseñado para acompañar tu aprendizaje en el curso introdu
 
 ## Índice alfabético
 
-[A](#a) | [B](#b) | [C](#c) | [D](#d) | [E](#e) | [F](#f) | [G](#g) | [H](#h) | [I](#i) | [K](#k) | [L](#l) | [M](#m) | [N](#n) | [O](#o) | [P](#p) | [Q](#q) | [R](#r) | [S](#s) | [T](#t) | [U](#u) | [V](#v) | [W](#w)
+[A](#a) • [B](#b) • [C](#c) • [D](#d) • [E](#e) • [F](#f) • [G](#g) • [H](#h) • [I](#i) • [K](#k) • [L](#l) • [M](#m) • [N](#n) • [O](#o) • [P](#p) • [Q](#q) • [R](#r) • [S](#s) • [T](#t) • [U](#u) • [V](#v) • [W](#w)
 
 ---
 
@@ -12,7 +12,7 @@ Este glosario está diseñado para acompañar tu aprendizaje en el curso introdu
 
 ### **Argumento**
 Valor que se pasa a una función para que esta lo use en su operación. Puede ser obligatorio u opcional.
-```
+```r
 # "x" es el argumento de la función mean()
 mean(x = c(1, 2, 3, 4, 5))
 
@@ -26,8 +26,8 @@ seq(from = 1, to = 10, by = 2)
 ---
 
 ### **Array**
-Estructura de datos multidimensional. Es una generalización de una matriz (que es 2D) a \(n\) dimensiones.
-```
+Estructura de datos multidimensional. Es una generalización de una matriz (que es 2D) a $n$ dimensiones.
+```r
 # Array de 3 dimensiones (2x3x4)
 mi_array <- array(data = 1:24, dim = c(2, 3, 4))
 ```
@@ -37,7 +37,7 @@ mi_array <- array(data = 1:24, dim = c(2, 3, 4))
 
 ### **Asignación**
 Acción de guardar un valor en una variable. En R se prefiere el operador `<-`.
-```
+```r
 # Asignación estándar (Recomendada)
 edad <- 25
 
@@ -52,7 +52,7 @@ edad = 25
 
 ### **Base R**
 El núcleo de R. Conjunto de funciones y paquetes instalados por defecto (como `base`, `utils`, `stats`) que funcionan sin instalar nada extra.
-```
+```r
 # Funciones típicas de Base R
 mean(c(1, 2, 3))
 table(mtcars$cyl)
@@ -69,7 +69,7 @@ Ver [Logical](#logical).
 
 ### **Boxplot**
 Diagrama de caja y bigotes. Muestra la distribución, centralidad y dispersión de los datos.
-```
+```r
 boxplot(mtcars$mpg,
         main = "Distribución de Millas por Galón",
         ylab = "MPG")
@@ -83,7 +83,7 @@ boxplot(mtcars$mpg,
 
 ### **`c()` (Combinar)**
 Función fundamental para crear vectores o combinar valores. Significa *combine* o *concatenate*.
-```
+```r
 # Crear un vector numérico
 numeros <- c(1, 5, 10)
 
@@ -96,7 +96,7 @@ nombres <- c("Ana", "Beto")
 
 ### **Carácter** (Character)
 Tipo de dato que representa texto. Siempre debe ir entre comillas.
-```
+```r
 nombre <- "María"
 ciudad <- 'Mar del Plata'  # Comillas simples o dobles funcionan
 class(nombre)  # "character"
@@ -107,20 +107,22 @@ class(nombre)  # "character"
 
 ### **Chunk**
 Bloque de código ejecutable dentro de un documento R Markdown o Quarto.
-```
+
+````markdown
 ```{r}
 # Esto es un chunk
 x <- 5
 print(x)
 ```
 ````
+
 **Ver también:** [R Markdown](#r-markdown)
 
 ---
 
 ### **Clase** (Class)
 Atributo que define qué tipo de objeto es y cómo reacciona ante funciones genéricas.
-```
+```r
 class(5)          # "numeric"
 class("hola")     # "character"
 class(mtcars)     # "data.frame"
@@ -131,7 +133,7 @@ class(mtcars)     # "data.frame"
 
 ### **Columna**
 Dimensión vertical en un data frame o matriz. Representa una variable.
-```
+```r
 df$edad           # Acceso con $
 df[, "edad"]      # Acceso matricial
 ```
@@ -141,7 +143,7 @@ df[, "edad"]      # Acceso matricial
 
 ### **Comentario**
 Texto ignorado por R, usado para explicar el código. Empieza con `#`.
-```
+```r
 # Esto es un comentario
 x <- 10  # Asigno 10 a x
 ```
@@ -161,7 +163,7 @@ Panel donde se ejecutan los comandos interactivamente y se ve la salida inmediat
 
 ### **CRAN**
 **Comprehensive R Archive Network**. Repositorio oficial mundial de paquetes de R.
-```
+```r
 install.packages("ggplot2") # Descarga desde CRAN
 ```
 **Ver también:** [Paquete](#paquete), [Repositorio](#repositorio)
@@ -170,7 +172,7 @@ install.packages("ggplot2") # Descarga desde CRAN
 
 ### **CSV**
 **Comma-Separated Values**. Formato de archivo de texto simple muy común para intercambiar datos.
-```
+```r
 datos <- read.csv("datos.csv")
 write.csv(datos, "mis_resultados.csv", row.names = FALSE)
 ```
@@ -180,7 +182,7 @@ write.csv(datos, "mis_resultados.csv", row.names = FALSE)
 
 ### **Cuartil**
 Valores que dividen un conjunto ordenado de datos en cuatro partes iguales (25%, 50%, 75%).
-```
+```r
 quantile(1:100, probs = c(0.25, 0.50, 0.75))
 ```
 **Ver también:** [Mediana](#mediana), [Percentil](#percentil)
@@ -191,7 +193,7 @@ quantile(1:100, probs = c(0.25, 0.50, 0.75))
 
 ### **Data frame**
 Estructura tabular fundamental en R. Columnas = variables, Filas = observaciones. Puede tener distintos tipos de datos por columna (texto, números).
-```
+```r
 df <- data.frame(
   id = 1:3,
   nombre = c("Ana", "Bob", "Ciro")
@@ -203,7 +205,7 @@ df <- data.frame(
 
 ### **Dataset**
 Conjunto de datos. R incluye varios para practicar.
-```
+```r
 data(iris)   # Carga el dataset iris
 head(iris)   # Muestra las primeras filas
 ```
@@ -213,7 +215,7 @@ head(iris)   # Muestra las primeras filas
 
 ### **Desviación estándar** (Standard Deviation)
 Medida de cuánto se alejan los valores del promedio. Es la raíz cuadrada de la varianza.
-```
+```r
 sd(c(1, 5, 10))
 ```
 **Ver también:** [Varianza](#varianza), [Media](#media)
@@ -222,7 +224,7 @@ sd(c(1, 5, 10))
 
 ### **Dimensión**
 Tamaño de una estructura de datos (número de filas y columnas).
-```
+```r
 matriz <- matrix(1:12, nrow = 3, ncol = 4)
 
 dim(matriz)      # 3 4 (3 filas, 4 columnas)
@@ -235,7 +237,7 @@ ncol(matriz)     # 4 (número de columnas)
 
 ### **Directorio de trabajo** (Working Directory)
 Carpeta donde R busca archivos para leer y donde guarda lo que exportas.
-```
+```r
 getwd()          # ¿Dónde estoy?
 setwd("C:/R/")   # Cambiar carpeta (No recomendado, usar Proyectos)
 list.files()     # Listar archivos
@@ -246,7 +248,7 @@ list.files()     # Listar archivos
 
 ### **Documentación**
 Información de ayuda sobre funciones, paquetes o conceptos de R.
-```
+```r
 ?mean
 help(mean)
 ??regression
@@ -266,7 +268,7 @@ Panel de RStudio donde escribes tus scripts. El código aquí no se ejecuta hast
 
 ### **Entero** (Integer)
 Número sin decimales. Para forzarlo en R se usa una `L` al final.
-```
+```r
 x <- 10L
 class(x) # "integer"
 ```
@@ -276,7 +278,7 @@ class(x) # "integer"
 
 ### **Environment**
 Panel que lista todos los objetos (variables, datos, funciones) creados en tu sesión actual.
-```
+```r
 ls()  # Lista los objetos por código
 rm(x) # Elimina un objeto del environment
 ```
@@ -296,7 +298,7 @@ Mensaje crítico que detiene la ejecución. Significa que la instrucción no pud
 
 ### **Estructura de datos**
 Forma en que R organiza y almacena datos. Las principales son: vector, matriz, array, data frame y lista.
-```
+```r
 v <- c(1, 2, 3)
 m <- matrix(1:6, nrow = 2)
 df <- data.frame(x = 1:3, y = c("a", "b", "c"))
@@ -310,7 +312,7 @@ l <- list(vector = v, matriz = m, dataframe = df)
 
 ### **Factor**
 Estructura para datos categóricos (nominales u ordinales). Almacena etiquetas como números internamente.
-```
+```r
 sexo <- factor(c("M", "F", "F", "M"))
 levels(sexo) # "F" "M"
 ```
@@ -320,7 +322,7 @@ levels(sexo) # "F" "M"
 
 ### **Fila**
 Dimensión horizontal en un data frame. Representa una observación o caso individual.
-```
+```r
 df[1, ]      # Primera fila completa
 df[2:3, ]    # Filas 2 y 3
 ```
@@ -330,7 +332,7 @@ df[2:3, ]    # Filas 2 y 3
 
 ### **Filtrar**
 Operación de seleccionar filas que cumplen una condición lógica.
-```
+```r
 # Base R
 subset(mtcars, mpg > 20)
 
@@ -344,7 +346,7 @@ filter(mtcars, mpg > 20)
 
 ### **Función**
 Bloque de código que realiza una tarea. Sigue la forma `nombre(argumentos)`.
-```
+```r
 sum(1, 2)  # sum es la función
 
 saludar <- function(nombre) {
@@ -360,7 +362,7 @@ saludar("María")
 
 ### **Geom** (Geometría)
 En `ggplot2`, define la forma visual del gráfico (puntos, líneas, barras).
-```
+```r
 library(ggplot2)
 
 ggplot(mtcars, aes(x = mpg, y = wt)) +
@@ -373,7 +375,7 @@ ggplot(mtcars, aes(x = mpg, y = wt)) +
 
 ### **ggplot2**
 El paquete de visualización más popular de R, basado en la "Gramática de Gráficos".
-```
+```r
 library(ggplot2)
 
 ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) +
@@ -386,7 +388,7 @@ ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) +
 
 ### **Gráfico** (Plot)
 Visualización de datos.
-```
+```r
 plot(x, y)              # Base R
 hist(mtcars$mpg)        # Histograma
 boxplot(mtcars$mpg)     # Boxplot
@@ -399,7 +401,7 @@ boxplot(mtcars$mpg)     # Boxplot
 
 ### **Help**
 Ayuda oficial de R.
-```
+```r
 ?mean        # Ayuda rápida
 help("mean") # Lo mismo
 ??regression # Búsqueda más amplia
@@ -410,7 +412,7 @@ help("mean") # Lo mismo
 
 ### **Histograma**
 Gráfico para ver la distribución de una variable numérica continua.
-```
+```r
 hist(mtcars$mpg,
      main = "Histograma de MPG",
      xlab = "MPG")
@@ -423,7 +425,7 @@ hist(mtcars$mpg,
 
 ### **Importar**
 Leer datos externos hacia R.
-```
+```r
 datos_csv <- read.csv("archivo.csv")
 
 library(readxl)
@@ -435,9 +437,9 @@ datos_xlsx <- read_excel("archivo.xlsx")
 
 ### **Índice** (Index)
 Posición numérica de un elemento. **R empieza a contar desde 1**.
-```
+```r
 v <- c("A", "B", "C")
-v # "A"
+v[1] # "A"
 ```
 **Ver también:** [Vector](#vector), [Subset](#subset)
 
@@ -445,7 +447,7 @@ v # "A"
 
 ### **Inf**
 Valor especial que representa infinito.
-```
+```r
 1 / 0       # Inf (infinito positivo)
 -1 / 0      # -Inf (infinito negativo)
 is.infinite(Inf)  # TRUE
@@ -455,8 +457,8 @@ is.infinite(Inf)  # TRUE
 ---
 
 ### **IQR**
-Rango Intercuartílico (\(Q3 - Q1\)). Mide la dispersión del 50% central de los datos.
-```
+Rango Intercuartílico ($Q3 - Q1$). Mide la dispersión del 50% central de los datos.
+```r
 IQR(mtcars$mpg)
 ```
 **Ver también:** [Cuartil](#cuartil), [Boxplot](#boxplot)
@@ -478,7 +480,7 @@ Proceso de convertir un archivo R Markdown en un documento final (HTML, PDF, Wor
 
 ### **Levels** (Niveles)
 Las categorías únicas permitidas en un factor.
-```
+```r
 f <- factor(c("Alto", "Bajo", "Medio"))
 levels(f)
 ```
@@ -488,7 +490,7 @@ levels(f)
 
 ### **Librería** (Library)
 Directorio donde se almacenan los paquetes. A menudo se usa erróneamente como sinónimo de paquete.
-```
+```r
 library(dplyr) # Carga un paquete instalado
 ```
 **Ver también:** [Paquete](#paquete)
@@ -497,7 +499,7 @@ library(dplyr) # Carga un paquete instalado
 
 ### **Lista**
 Objeto muy flexible que puede contener cualquier otro objeto dentro (vectores, data frames, otras listas).
-```
+```r
 mi_lista <- list(
   nombre = "Juan",
   notas  = c(10, 8, 9)
@@ -510,7 +512,7 @@ mi_lista$notas
 
 ### **Logical**
 Tipo de dato binario: `TRUE` (T) o `FALSE` (F).
-```
+```r
 5 > 3  # TRUE
 10 == 5 # FALSE
 ```
@@ -522,7 +524,7 @@ Tipo de dato binario: `TRUE` (T) o `FALSE` (F).
 
 ### **Matriz**
 Estructura 2D donde **todos** los datos deben ser del mismo tipo (todos números o todos caracteres).
-```
+```r
 matrix(1:9, nrow = 3, ncol = 3)
 ```
 **Ver también:** [Array](#array), [Data frame](#data-frame)
@@ -531,7 +533,7 @@ matrix(1:9, nrow = 3, ncol = 3)
 
 ### **Media** (Mean)
 Promedio aritmético.
-```
+```r
 mean(c(10, 20)) # 15
 ```
 **Ver también:** [Mediana](#mediana), [Moda](#moda)
@@ -540,7 +542,7 @@ mean(c(10, 20)) # 15
 
 ### **Mediana** (Median)
 Valor central de los datos. Es más robusta a valores extremos que la media.
-```
+```r
 median(c(1, 2, 100)) # 2
 ```
 **Ver también:** [Media](#media), [Cuartil](#cuartil)
@@ -549,8 +551,8 @@ median(c(1, 2, 100)) # 2
 
 ### **Módulo**
 Operador `%%` que devuelve el resto de una división.
-```
-10%% 3   # 1
+```r
+10 %% 3   # 1
 ```
 **Ver también:** [División entera](#división-entera), [Operador](#operador)
 
@@ -560,7 +562,7 @@ Operador `%%` que devuelve el resto de una división.
 
 ### **NA**
 **Not Available**. Representa un dato faltante. Es "contagioso" en operaciones.
-```
+```r
 mean(c(1, 2, NA))           # NA
 mean(c(1, 2, NA), na.rm=TRUE)  # 1.5
 ```
@@ -569,8 +571,8 @@ mean(c(1, 2, NA), na.rm=TRUE)  # 1.5
 ---
 
 ### **NaN**
-**Not a Number**. Resultado matemático imposible (ej. \(0/0\)).
-```
+**Not a Number**. Resultado matemático imposible (ej. $0/0$).
+```r
 0/0      # NaN
 is.nan(0/0)  # TRUE
 ```
@@ -580,7 +582,7 @@ is.nan(0/0)  # TRUE
 
 ### **NULL**
 El vacío. Indica que el objeto no existe o está vacío. Diferente a `NA`.
-```
+```r
 x <- NULL
 is.null(x) # TRUE
 ```
@@ -590,7 +592,7 @@ is.null(x) # TRUE
 
 ### **Numeric**
 Tipo de dato para números reales (con decimales). Es el tipo por defecto para números en R.
-```
+```r
 x <- 1.5
 class(x)  # "numeric"
 ```
@@ -602,7 +604,7 @@ class(x)  # "numeric"
 
 ### **Objeto**
 Todo en R es un objeto: variables, funciones, gráficos, resultados de modelos.
-```
+```r
 x <- 5                    # Objeto numérico
 f <- function() {}        # Objeto función
 df <- data.frame()        # Objeto data frame
@@ -616,7 +618,7 @@ Símbolos para cálculos o comparaciones.
 - Aritméticos: `+`, `-`, `*`, `/`, `^`, `%%`, `%/%`
 - Relacionales: `==`, `!=`, `>`, `<`, `>=`, `<=`
 - Lógicos: `&` (AND), `|` (OR), `!` (NOT)
-```
+```r
 5 > 3 & 2 < 1  # FALSE
 ```
 **Ver también:** [Función](#función)
@@ -625,7 +627,7 @@ Símbolos para cálculos o comparaciones.
 
 ### **Operador de asignación**
 Símbolo para asignar valores a variables: `<-` o `=`.
-```
+```r
 edad <- 25
 edad = 25
 30 -> edad_nueva
@@ -636,7 +638,7 @@ edad = 25
 
 ### **Outlier**
 Dato atípico que se aleja drásticamente del patrón del resto.
-```
+```r
 datos <- c(10, 12, 15, 18, 20, 22, 100)  # 100 es un outlier
 boxplot(datos)
 ```
@@ -648,7 +650,7 @@ boxplot(datos)
 
 ### **Paquete** (Package)
 Extensiones de R creadas por la comunidad. Contienen código, datos y documentación.
-```
+```r
 install.packages("dplyr") # Instalar (una vez)
 library(dplyr)            # Cargar (cada sesión)
 installed.packages()      # Ver paquetes instalados
@@ -659,7 +661,7 @@ installed.packages()      # Ver paquetes instalados
 
 ### **Parámetro**
 Variable definida en la creación de una función.
-```
+```r
 mi_funcion <- function(x) {  # x es parámetro
   x * 2
 }
@@ -671,7 +673,7 @@ mi_funcion(5)  # 5 es argumento
 
 ### **Percentil**
 Valor que divide un conjunto ordenado de datos en 100 partes iguales.
-```
+```r
 datos <- 1:100
 quantile(datos, probs = 0.90)  # Percentil 90
 ```
@@ -681,7 +683,7 @@ quantile(datos, probs = 0.90)  # Percentil 90
 
 ### **Pipe** (`%>%` o `|>`)
 Operador para encadenar funciones. Pasa el resultado de la izquierda como primer argumento de la derecha. "Y entonces...".
-```
+```r
 # Estilo tidyverse (requiere magrittr/dplyr)
 library(dplyr)
 mtcars %>%
@@ -719,7 +721,7 @@ Ver [Cuartil](#cuartil) y [Percentil](#percentil)
 
 ### **R**
 Lenguaje de programación y entorno para análisis estadístico y gráficos.
-```
+```r
 R.version.string
 ```
 **Ver también:** [RStudio](#rstudio), [Base R](#base-r)
@@ -728,11 +730,12 @@ R.version.string
 
 ### **R Markdown**
 Formato que combina código R con texto Markdown para crear documentos dinámicos (HTML, PDF, Word).
-```
-***
+
+````markdown
+---
 title: "Mi Análisis"
 output: html_document
-***
+---
 
 ## Introducción
 
@@ -745,13 +748,14 @@ mean(x)
 
 El promedio es `r mean(x)`.
 ````
+
 **Ver también:** [Chunk](#chunk), [Knitr](#knitr)
 
 ---
 
 ### **RData**
 Formato de archivo de R para guardar objetos.
-```
+```r
 save(x, y, file = "mis_datos.RData")
 load("mis_datos.RData")
 ```
@@ -761,7 +765,7 @@ load("mis_datos.RData")
 
 ### **RDS**
 Formato de archivo de R para guardar un solo objeto.
-```
+```r
 saveRDS(mi_dataframe, "datos.rds")
 mi_dataframe <- readRDS("datos.rds")
 ```
@@ -779,7 +783,7 @@ Entorno de desarrollo integrado (IDE) para trabajar con R. Proporciona consola, 
 
 ### **Script** (`.R`)
 Archivo de texto simple donde guardas tu código R para ejecutarlo después. Es una buena práctica trabajar siempre en scripts, no directo en la consola.
-```
+```r
 # script_ejemplo.R
 x <- 1:10
 mean(x)
@@ -790,7 +794,7 @@ mean(x)
 
 ### **String**
 Sinónimo de cadena de caracteres o texto.
-```
+```r
 mensaje <- "Hola mundo"
 class(mensaje)  # "character"
 ```
@@ -800,7 +804,7 @@ class(mensaje)  # "character"
 
 ### **Subset**
 Subconjunto de datos. Extraer una parte de un objeto (filas, columnas, elementos) basado en índices o condiciones.
-```
+```r
 # Elementos del 1 al 5
 vector[1:5]
 
@@ -813,7 +817,7 @@ subset(datos, edad > 18)
 
 ### **Summary**
 Función genérica muy útil que ofrece un resumen estadístico rápido de un objeto.
-```
+```r
 summary(mtcars$mpg)
 summary(mtcars)
 ```
@@ -824,7 +828,7 @@ summary(mtcars)
 
 ### **Tibble**
 Una versión moderna y refinada del data frame, usada en el **Tidyverse**. Muestra mejor la información en consola y evita comportamientos automáticos molestos de los data frames clásicos.
-```
+```r
 library(tibble)
 as_tibble(iris)
 ```
@@ -834,7 +838,7 @@ as_tibble(iris)
 
 ### **Tidyverse**
 Colección de paquetes R diseñados para la ciencia de datos que comparten una filosofía de diseño, gramática y estructuras de datos comunes. Incluye `ggplot2`, `dplyr`, `tidyr`, `readr`, entre otros.
-```
+```r
 install.packages("tidyverse")
 library(tidyverse)
 ```
@@ -852,7 +856,7 @@ La naturaleza del valor almacenado. Los atómicos principales en R son: `numeric
 
 ### **Unlist**
 Función para convertir una lista en un vector simple.
-```
+```r
 lista <- list(a = 1, b = 2)
 vector <- unlist(lista) # c(1, 2)
 ```
@@ -864,7 +868,7 @@ vector <- unlist(lista) # c(1, 2)
 
 ### **Variable**
 Nombre simbólico que se le da a un valor o un objeto para almacenarlo en la memoria.
-```
+```r
 mi_variable <- 10
 ```
 **Ver también:** [Asignación](#asignación), [Objeto](#objeto)
@@ -873,7 +877,7 @@ mi_variable <- 10
 
 ### **Varianza**
 Medida de dispersión (el cuadrado de la desviación estándar).
-```
+```r
 var(c(1, 5, 10))
 ```
 **Ver también:** [Desviación estándar](#desviación-estándar)
@@ -882,7 +886,7 @@ var(c(1, 5, 10))
 
 ### **Vector**
 La estructura de datos más básica en R. Una colección ordenada de elementos del **mismo tipo**. Incluso un solo número en R es un vector de longitud 1.
-```
+```r
 v <- c(10, 20, 30)
 length(v) # 3
 ```
@@ -892,7 +896,7 @@ length(v) # 3
 
 ### **Vectorización**
 Característica potente de R donde las operaciones se aplican a todo el vector a la vez sin necesidad de bucles (loops).
-```
+```r
 x <- c(1, 2, 3)
 y <- x * 2
 # Resultado: 2, 4, 6 (multiplicó todos los elementos simultáneamente)
@@ -902,7 +906,7 @@ y <- x * 2
 
 ### **View**
 Función de RStudio que abre una pestaña estilo hoja de cálculo para inspeccionar un data frame.
-```
+```r
 View(mtcars) # Nota: La V es mayúscula
 ```
 
