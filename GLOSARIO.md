@@ -4,11 +4,27 @@ Este glosario está diseñado para acompañar tu aprendizaje en el curso introdu
 
 ## Índice alfabético
 
-[A](#a) • [B](#b) • [C](#c) • [D](#d) • [E](#e) • [F](#f) • [G](#g) • [H](#h) • [I](#i) • [K](#k) • [L](#l) • [M](#m) • [N](#n) • [O](#o) • [P](#p) • [Q](#q) • [R](#r) • [S](#s) • [T](#t) • [U](#u) • [V](#v) • [W](#w)
+[A](#a) • [B](#b) • [C](#c) • [D](#d) • [E](#e) • [F](#f) • [G](#g) • [H](#h) • [I](#i) • [J](#j) • [K](#k) • [L](#l) • [M](#m) • [N](#n) • [O](#o) • [P](#p) • [Q](#q) • [R](#r) • [S](#s) • [T](#t) • [U](#u) • [V](#v) • [W](#w) • [X](#x) • [Y](#y) • [Z](#z)
 
 ---
 
 ## A
+
+### **Archivo**
+Documento digital almacenado en el disco. En R, típicamente trabajas con archivos de datos (`.csv`, `.xlsx`, `.rds`) o scripts (`.R`, `.Rmd`).
+```r
+# Listar archivos en el directorio actual
+list.files()
+
+# Verificar si un archivo existe
+file.exists("datos.csv")
+
+# Información sobre un archivo
+file.info("script.R")
+```
+**Ver también:** [Ruta](#ruta), [Directorio de trabajo](#directorio-de-trabajo), [Importar](#importar)
+
+---
 
 ### **Argumento**
 Valor que se pasa a una función para que esta lo use en su operación. Puede ser obligatorio u opcional.
@@ -213,6 +229,21 @@ head(iris)   # Muestra las primeras filas
 
 ---
 
+### **Debug**
+Proceso de encontrar y corregir errores en el código. RStudio tiene herramientas integradas para depuración.
+```r
+# Funciones útiles para debugging
+print(x)           # Imprimir valores
+str(objeto)        # Estructura del objeto
+traceback()        # Ver pila de llamadas tras error
+browser()          # Pausar ejecución para inspeccionar
+
+# En RStudio: usa breakpoints (puntos rojos al lado del código)
+```
+**Ver también:** [Error](#error), [Warning](#warning)
+
+---
+
 ### **Desviación estándar** (Standard Deviation)
 Medida de cuánto se alejan los valores del promedio. Es la raíz cuadrada de la varianza.
 ```r
@@ -246,6 +277,34 @@ list.files()     # Listar archivos
 
 ---
 
+### **Distribución**
+Patrón que describe cómo se dispersan los valores de una variable. Fundamental en estadística.
+```r
+# Visualizar distribución
+hist(mtcars$mpg)  # Histograma
+boxplot(mtcars$mpg)  # Boxplot
+density(mtcars$mpg)  # Curva de densidad
+
+# Distribuciones comunes
+rnorm(100)    # Normal
+runif(100)    # Uniforme
+rpois(100, lambda = 3)  # Poisson
+```
+**Ver también:** [Histograma](#histograma), [Boxplot](#boxplot)
+
+---
+
+### **División entera**
+Operador `%/%` que devuelve solo la parte entera de una división.
+```r
+17 %/% 5   # 3 (descarta el resto)
+17 / 5     # 3.4 (división normal)
+17 %% 5    # 2 (solo el resto)
+```
+**Ver también:** [Módulo](#módulo), [Operador](#operador)
+
+---
+
 ### **Documentación**
 Información de ayuda sobre funciones, paquetes o conceptos de R.
 ```r
@@ -255,6 +314,20 @@ help(mean)
 example(mean)
 ```
 **Ver también:** [Comentario](#comentario), [Help](#help)
+
+---
+
+### **dplyr**
+Paquete del Tidyverse para manipulación de datos. Ofrece funciones intuitivas como `filter()`, `select()`, `mutate()`, `summarise()` y `arrange()`.
+```r
+library(dplyr)
+
+mtcars %>%
+  filter(mpg > 20) %>%
+  select(mpg, cyl, hp) %>%
+  arrange(desc(hp))
+```
+**Ver también:** [Tidyverse](#tidyverse), [Pipe](#pipe), [Filtrar](#filtrar)
 
 ---
 
@@ -293,6 +366,23 @@ Mensaje crítico que detiene la ejecución. Significa que la instrucción no pud
 # Significa que intentas usar una variable que no has creado.
 ```
 **Ver también:** [Warning](#warning), [Debug](#debug)
+
+---
+
+### **Exportar**
+Guardar datos de R hacia archivos externos para compartir o usar en otras aplicaciones.
+```r
+# Exportar a CSV
+write.csv(mi_dataframe, "datos_exportados.csv", row.names = FALSE)
+
+# Exportar a Excel
+library(writexl)
+write_xlsx(mi_dataframe, "datos.xlsx")
+
+# Exportar gráfico
+ggsave("mi_grafico.png", width = 8, height = 6)
+```
+**Ver también:** [Importar](#importar), [CSV](#csv), [xlsx](#xlsx)
 
 ---
 
@@ -465,14 +555,68 @@ IQR(mtcars$mpg)
 
 ---
 
+## J
+
+### **Join** (Unir)
+Operación para combinar dos data frames basándose en una o más columnas comunes. Similar a las uniones en SQL.
+```r
+# Ejemplo con dplyr
+library(dplyr)
+
+# Inner join: solo filas que coinciden en ambos
+inner_join(df1, df2, by = "id")
+
+# Left join: todas las filas de df1
+left_join(df1, df2, by = "id")
+
+# Full join: todas las filas de ambos
+full_join(df1, df2, by = "id")
+```
+**Ver también:** [Merge](#merge), [Data frame](#data-frame), [dplyr](#dplyr)
+
+---
+
+### **JSON**
+**JavaScript Object Notation**. Formato de intercambio de datos muy popular en APIs y aplicaciones web.
+```r
+library(jsonlite)
+
+# Leer JSON
+datos <- fromJSON("datos.json")
+
+# Escribir JSON
+toJSON(mi_dataframe, pretty = TRUE)
+```
+**Ver también:** [CSV](#csv), [Importar](#importar)
+
+---
+
 ## K
 
 ### **Knit** (Tejer)
 Proceso de convertir un archivo R Markdown en un documento final (HTML, PDF, Word).
-```
+```r
 # En RStudio: botón "Knit"
+# O desde código:
+rmarkdown::render("mi_documento.Rmd")
 ```
 **Ver también:** [R Markdown](#r-markdown), [Knitr](#knitr)
+
+---
+
+### **Knitr**
+Paquete que ejecuta código R y genera reportes dinámicos. Es el motor detrás de R Markdown.
+```r
+library(knitr)
+
+# Opciones de chunk comunes
+opts_chunk$set(
+  echo = TRUE,        # Mostrar código
+  warning = FALSE,    # Ocultar warnings
+  message = FALSE     # Ocultar mensajes
+)
+```
+**Ver también:** [R Markdown](#r-markdown), [Knit](#knit), [Chunk](#chunk)
 
 ---
 
@@ -546,6 +690,38 @@ Valor central de los datos. Es más robusta a valores extremos que la media.
 median(c(1, 2, 100)) # 2
 ```
 **Ver también:** [Media](#media), [Cuartil](#cuartil)
+
+---
+
+### **Merge** (Fusionar)
+Función de Base R para combinar dos data frames. Similar a `join()` de dplyr.
+```r
+# Merge por columna común
+merge(df1, df2, by = "id")
+
+# Diferentes tipos de merge
+merge(df1, df2, by = "id", all = TRUE)    # Full join
+merge(df1, df2, by = "id", all.x = TRUE)  # Left join
+merge(df1, df2, by = "id", all.y = TRUE)  # Right join
+```
+**Ver también:** [Join](#join), [Data frame](#data-frame)
+
+---
+
+### **Moda** (Mode)
+Valor que aparece con mayor frecuencia. R no tiene función nativa para calcularla.
+```r
+# Encontrar la moda manualmente
+tabla <- table(c(1, 2, 2, 3, 3, 3, 4))
+names(tabla)[which.max(tabla)]  # "3"
+
+# Función personalizada
+calcular_moda <- function(x) {
+  uniq <- unique(x)
+  uniq[which.max(tabulate(match(x, uniq)))]
+}
+```
+**Ver también:** [Media](#media), [Mediana](#mediana)
 
 ---
 
@@ -763,6 +939,43 @@ load("mis_datos.RData")
 
 ---
 
+### **Repositorio**
+Servidor donde se almacenan paquetes de R. CRAN es el repositorio oficial principal.
+```r
+# Ver repositorios configurados
+getOption("repos")
+
+# Instalar desde CRAN (repositorio por defecto)
+install.packages("dplyr")
+
+# Instalar desde GitHub (repositorio alternativo)
+# install.packages("devtools")
+# devtools::install_github("usuario/paquete")
+```
+**Ver también:** [CRAN](#cran), [Paquete](#paquete)
+
+---
+
+### **Return**
+Palabra clave para devolver explícitamente un valor desde una función. No siempre es necesaria, ya que R devuelve automáticamente la última expresión evaluada.
+```r
+# Sin return (recomendado para casos simples)
+sumar <- function(a, b) {
+  a + b
+}
+
+# Con return (útil para salidas tempranas)
+dividir <- function(a, b) {
+  if (b == 0) {
+    return(NA)  # Salida temprana
+  }
+  a / b
+}
+```
+**Ver también:** [Función](#función), [Parámetro](#parámetro)
+
+---
+
 ### **RDS**
 Formato de archivo de R para guardar un solo objeto.
 ```r
@@ -776,6 +989,23 @@ mi_dataframe <- readRDS("datos.rds")
 ### **RStudio**
 Entorno de desarrollo integrado (IDE) para trabajar con R. Proporciona consola, editor, visualizador de gráficos, panel de environment, etc.
 **Ver también:** [Consola](#consola), [Editor](#editor), [Environment](#environment), [Proyecto](#proyecto)
+
+---
+
+### **Ruta** (Path)
+Ubicación de un archivo o directorio en el sistema. Pueden ser absolutas o relativas.
+```r
+# Ruta absoluta (desde la raíz)
+"C:/Users/Usuario/Documentos/datos.csv"
+
+# Ruta relativa (desde el directorio de trabajo)
+"datos/archivo.csv"
+"../carpeta_superior/archivo.csv"
+
+# Buenas prácticas: usar rutas relativas y Proyectos de RStudio
+# Evitar: setwd() y rutas absolutas
+```
+**Ver también:** [Directorio de trabajo](#directorio-de-trabajo), [Proyecto](#proyecto)
 
 ---
 
@@ -875,6 +1105,21 @@ mi_variable <- 10
 
 ---
 
+### **Variable categórica**
+Variable que representa categorías o grupos. En R se manejan con factores.
+```r
+# Variable categórica nominal (sin orden)
+color <- factor(c("rojo", "azul", "verde", "rojo"))
+
+# Variable categórica ordinal (con orden)
+talla <- factor(c("S", "M", "L", "M"),
+                levels = c("S", "M", "L"),
+                ordered = TRUE)
+```
+**Ver también:** [Factor](#factor), [Levels](#levels)
+
+---
+
 ### **Varianza**
 Medida de dispersión (el cuadrado de la desviación estándar).
 ```r
@@ -912,6 +1157,24 @@ View(mtcars) # Nota: La V es mayúscula
 
 ---
 
+### **Visualización**
+Representación gráfica de datos. R ofrece múltiples sistemas de visualización.
+```r
+# Base R
+plot(mtcars$wt, mtcars$mpg)
+hist(mtcars$mpg)
+barplot(table(mtcars$cyl))
+
+# ggplot2 (más moderno y flexible)
+library(ggplot2)
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+**Ver también:** [ggplot2](#ggplot2), [Gráfico](#gráfico), [Plot](#plot)
+
+---
+
 ## W
 
 ### **Warning**
@@ -927,3 +1190,90 @@ Mensaje de advertencia. Algo "sospechoso" ocurrió, pero R pudo terminar la tare
 ### **Workspace**
 El espacio de trabajo que contiene todos los objetos creados durante la sesión. Al cerrar RStudio, te preguntará si quieres guardarlo (generalmente es mejor decir que **No** y volver a correr el script "limpio").
 **Ver también:** [Environment](#environment)
+
+---
+
+## X
+
+### **xlsx**
+Formato de archivo de Microsoft Excel. R puede leer y escribir estos archivos con paquetes especializados.
+```r
+library(readxl)
+# Leer archivo Excel
+datos <- read_excel("archivo.xlsx", sheet = "Hoja1")
+
+library(writexl)
+# Escribir archivo Excel
+write_xlsx(mi_dataframe, "resultados.xlsx")
+```
+**Ver también:** [CSV](#csv), [Importar](#importar)
+
+---
+
+### **xlab / ylab**
+Argumentos de funciones gráficas para establecer las etiquetas de los ejes X e Y.
+```r
+plot(mtcars$wt, mtcars$mpg,
+     xlab = "Peso del vehículo (1000 lbs)",
+     ylab = "Millas por galón",
+     main = "Relación Peso-Consumo")
+```
+**Ver también:** [Gráfico](#gráfico), [Plot](#plot)
+
+---
+
+## Y
+
+### **YAML**
+Lenguaje de marcado usado en el encabezado de archivos R Markdown para especificar metadatos y opciones.
+```yaml
+---
+title: "Mi Análisis"
+author: "Tu Nombre"
+date: "2025-01-20"
+output: html_document
+---
+```
+**Ver también:** [R Markdown](#r-markdown), [Knit](#knit)
+
+---
+
+### **Yaxis / Xaxis**
+Referencias a los ejes vertical (Y) y horizontal (X) en un gráfico. En `ggplot2` se controlan con funciones específicas.
+```r
+library(ggplot2)
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  scale_y_continuous(limits = c(0, 40)) +
+  scale_x_continuous(breaks = seq(2, 5, 0.5))
+```
+**Ver también:** [ggplot2](#ggplot2), [Gráfico](#gráfico)
+
+---
+
+## Z
+
+### **Zoo**
+Paquete de R para trabajar con series temporales irregulares (datos ordenados en el tiempo).
+```r
+library(zoo)
+# Crear objeto zoo
+fechas <- as.Date(c("2024-01-01", "2024-01-05", "2024-01-10"))
+valores <- c(10, 15, 12)
+serie <- zoo(valores, fechas)
+```
+**Ver también:** [Paquete](#paquete), [Data frame](#data-frame)
+
+---
+
+### **Zero-indexing vs One-indexing**
+Diferencia fundamental entre lenguajes. **R usa one-indexing** (empieza en 1), mientras que Python y muchos otros usan zero-indexing (empiezan en 0).
+```r
+# En R, el primer elemento es el índice 1
+v <- c("primero", "segundo", "tercero")
+v[1]  # "primero" ✓
+
+# En Python sería v[0]
+# Esto es importante al migrar código entre lenguajes
+```
+**Ver también:** [Índice](#índice), [Vector](#vector)
