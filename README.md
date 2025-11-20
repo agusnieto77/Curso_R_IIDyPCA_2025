@@ -8,6 +8,9 @@ A continuación se resumen los contenidos y actividades sugeridas para cada día
 - [Glosario](https://github.com/agusnieto77/Curso_R_IIDyPCA_2025/blob/main/GLOSARIO.md)
 - [Bibliografia académica](https://github.com/agusnieto77/Curso_R_IIDyPCA_2025/blob/main/BIBLIOGRAFIA.md)
 
+## Presentación
+- [Intro a las CSC y HD](https://rpubs.com/agustin/intro_csc)
+
 ## Día 1 - Primeros pasos con R y RStudio
 
 **Objetivos**
