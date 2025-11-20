@@ -862,7 +862,8 @@ swirl()
 ### Cheat Sheets (Hojas de referencia)
 - [RStudio Cheat Sheets](https://www.rstudio.com/resources/cheatsheets/)
 
-### Cheat Sheets (Hojas de referencia)
+### Manual y Glosario
+- [Manual](https://github.com/agusnieto77/Curso_R_IIDyPCA_2025/blob/main/MANUAL.md)
 - [Glosario](https://github.com/agusnieto77/Curso_R_IIDyPCA_2025/blob/main/GLOSARIO.md)
 
 ### Tutoriales
