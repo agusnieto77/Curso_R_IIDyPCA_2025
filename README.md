@@ -3,6 +3,10 @@
 Este repositorio reúne los materiales del curso introductorio a R.
 A continuación se resumen los contenidos y actividades sugeridas para cada día.
 
+## Manual y Glosario
+- [Manual](https://github.com/agusnieto77/Curso_R_IIDyPCA_2025/blob/main/MANUAL.md)
+- [Glosario](https://github.com/agusnieto77/Curso_R_IIDyPCA_2025/blob/main/GLOSARIO.md)
+
 ## Día 1 - Primeros pasos con R y RStudio
 
 **Objetivos**
