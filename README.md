@@ -216,3 +216,5 @@ Para practicar un poco:
     ## Videos Clases
 
     [**Clase 1**](https://youtu.be/05EFYtArkQs)
+    [**Clase 2**](https://youtu.be/fBOOMeWe8mI)
+    
