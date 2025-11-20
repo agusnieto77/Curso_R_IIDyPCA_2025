@@ -862,9 +862,10 @@ swirl()
 ### Cheat Sheets (Hojas de referencia)
 - [RStudio Cheat Sheets](https://www.rstudio.com/resources/cheatsheets/)
 
-### Manual y Glosario
+### Manual, Glosario y Bibliografia académica
 - [Manual](https://github.com/agusnieto77/Curso_R_IIDyPCA_2025/blob/main/MANUAL.md)
 - [Glosario](https://github.com/agusnieto77/Curso_R_IIDyPCA_2025/blob/main/GLOSARIO.md)
+- [Bibliografia académica](https://github.com/agusnieto77/Curso_R_IIDyPCA_2025/blob/main/BIBLIOGRAFIA.md)
 
 ### Tutoriales
 - [R para dummies](https://www.youtube.com/watch?v=txr53VqSGoM)
