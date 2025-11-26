@@ -1,0 +1,22 @@
+[
+  {
+    "entity_": "Mar del Plata",
+    "lat": -37.9976,
+    "long": -57.5482
+  },
+  {
+    "entity_": "Buenos Aires",
+    "lat": -34.6096,
+    "long": -58.3888
+  },
+  {
+    "entity_": "Cordoba",
+    "lat": 37.8846,
+    "long": -4.776
+  },
+  {
+    "entity_": "Tierra del Fuego",
+    "lat": -54.3815,
+    "long": -67.5679
+  }
+]
