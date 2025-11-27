@@ -217,4 +217,5 @@ Para practicar un poco:
 
     [**Clase 1**](https://youtu.be/05EFYtArkQs)
     [**Clase 2**](https://youtu.be/fBOOMeWe8mI)
+    [**Clase 3**](https://youtu.be/6T89BrAxi9w)
     
